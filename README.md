@@ -79,14 +79,14 @@ webloker/
 
 ## Cara Instalasi & Menjalankan Aplikasi
 
-Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
+Pastikan sistem yang digunakan telah terinstal perangkat lunak berikut:
 * **PHP** (Minimal versi 8.2)
 * **Composer**
 * **Node.js** (Minimal versi 18)
-* **MySQL** (Bisa menggunakan Laragon, XAMPP, dsb.)
+* **MySQL** (Dapat menggunakan Laragon, XAMPP, dsb.)
 
 ### 1. Persiapan Database
-1. Buka aplikasi MySQL klien kamu (misal: phpMyAdmin, HeidiSQL, atau Terminal).
+1. Buka aplikasi klien MySQL (misal: phpMyAdmin, HeidiSQL, atau Terminal).
 2. Buat database baru dengan mengeksekusi perintah SQL berikut:
    ```sql
    CREATE DATABASE rt_perumahan;
@@ -97,7 +97,7 @@ Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
    ```bash
    cd backend
    ```
-2. Instal semua dependensi PHP yang dibutuhkan:
+2. Instal seluruh dependensi PHP yang dibutuhkan:
    ```bash
    composer install
    ```
@@ -105,8 +105,8 @@ Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
    ```bash
    cp .env.example .env
    ```
-   *(Jika menggunakan Windows Command Prompt dan perintah `cp` tidak dikenali, kamu bisa menyalin file `.env.example` secara manual dan mengubah namanya menjadi `.env`)*
-4. Buka file `.env` yang baru dibuat, dan pastikan konfigurasi database sudah benar:
+   *(Jika menggunakan Windows Command Prompt dan perintah `cp` tidak dikenali, file `.env.example` dapat disalin secara manual lalu diubah namanya menjadi `.env`)*
+4. Buka file `.env` yang baru dibuat, dan sesuaikan konfigurasi database:
    ```env
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
@@ -115,7 +115,7 @@ Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
    DB_USERNAME=root
    DB_PASSWORD=
    ```
-   *(Isi `DB_PASSWORD` sesuai dengan kata sandi MySQL kamu, kosongkan jika tidak ada)*
+   *(Isi `DB_PASSWORD` sesuai dengan kata sandi MySQL yang digunakan, kosongkan jika tidak ada)*
 5. Generate application key Laravel:
    ```bash
    php artisan key:generate
@@ -129,7 +129,7 @@ Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
    ```bash
    php artisan storage:link
    ```
-8. Jalankan server lokal backend (biarkan terminal ini tetap terbuka):
+8. Jalankan server lokal backend (biarkan terminal ini tetap berjalan):
    ```bash
    php artisan serve --port=8000
    ```
@@ -149,10 +149,10 @@ Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
    ```
 
 ### 4. Mengakses Aplikasi
-Setelah kedua server (backend dan frontend) berhasil berjalan, kamu bisa mulai menggunakan aplikasi:
+Setelah kedua server (backend dan frontend) berjalan, aplikasi dapat diakses melalui langkah berikut:
 1. Buka web browser (Chrome, Firefox, Safari, dll).
 2. Kunjungi alamat: **[http://localhost:5173](http://localhost:5173)**
-3. Gunakan akun administrator bawaan untuk masuk:
+3. Gunakan kredensial administrator bawaan untuk masuk:
    * **Email**: `admin@rt.com`
    * **Password**: `password`
 
