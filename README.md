@@ -49,11 +49,11 @@ Proyek ini dipisahkan menjadi dua bagian utama (Decoupled Architecture):
 
 ### Frontend (Client-Side)
 * **Framework**: React 18
-* **Build Tool**: Vite (Super fast HMR)
-* **Routing**: React Router DOM (v6)
-* **HTTP Client**: Axios (Proxy to Backend)
+* **Build Tool**: Vite 
+* **Routing**: React Router DOM 
+* **HTTP Client**: Axios 
 * **Visualisasi Data**: Recharts
-* **Iconografi**: React Icons (Tanpa menggunakan Emoji bawaan sistem)
+* **Iconografi**: React Icons 
 * **Notifikasi**: React Hot Toast
 
 ---
