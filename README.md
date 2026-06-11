@@ -1,6 +1,6 @@
 # Sistem Informasi Manajemen RT Perumahan
 
-Aplikasi ini saya buat sebagai pemenuhan tugas Skill Fit Test - Full Stack Programmer. Sistem ini bertujuan untuk membantu pengurus RT di perumahan elite dalam mendigitalisasi pengelolaan administrasi warga, rumah, dan keuangan secara terpusat.
+Aplikasi ini dikembangkan sebagai pemenuhan tugas Skill Fit Test - Full Stack Programmer. Sistem ini bertujuan untuk membantu pengurus RT di perumahan elite dalam mendigitalisasi pengelolaan administrasi warga, rumah, dan keuangan secara terpusat.
 
 Aplikasi dikembangkan menggunakan arsitektur frontend dan backend yang terpisah (decoupled).
 
@@ -34,7 +34,7 @@ Aplikasi ini dapat dijalankan langsung di environment lokal (tanpa Docker). Past
    DB_USERNAME=root
    DB_PASSWORD=
    ```
-   *(Sesuaikan DB_PASSWORD jika MySQL Anda menggunakan password)*
+   *(Sesuaikan DB_PASSWORD jika terdapat password pada MySQL)*
 5. Generate key dan jalankan migrasi beserta seedernya:
    ```bash
    php artisan key:generate
@@ -67,8 +67,6 @@ Gunakan akun berikut untuk mencoba aplikasinya:
 - **Email**: `admin@rt.com`
 - **Password**: `password`
 
-## Dokumentasi Database
-Struktur tabel beserta relasinya sudah saya sediakan dalam file terpisah bernama `ERD.md` di dalam repository ini.
 
 ---
 Dikembangkan oleh **Adryan Maha Putra**
