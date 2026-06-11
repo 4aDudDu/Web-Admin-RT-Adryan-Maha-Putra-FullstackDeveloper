@@ -77,11 +77,82 @@ webloker/
 
 ---
 
-### Tutoriallll:
-1. Buat database MySQL dengan nama `rt_perumahan`.
-2. Di folder `backend/`: jalankan `composer install`, copy `.env`, jalankan `php artisan migrate:fresh --seed`, lalu `php artisan storage:link`, dan start server `php artisan serve --port=8000`.
-3. Di folder `frontend/`: jalankan `npm install`, lalu `npm run dev`.
-4. Akses `http://localhost:5173` dan login menggunakan:
+## Cara Instalasi & Menjalankan Aplikasi
+
+Pastikan komputer atau laptop kamu sudah terinstal perangkat lunak berikut:
+* **PHP** (Minimal versi 8.2)
+* **Composer**
+* **Node.js** (Minimal versi 18)
+* **MySQL** (Bisa menggunakan Laragon, XAMPP, dsb.)
+
+### 1. Persiapan Database
+1. Buka aplikasi MySQL klien kamu (misal: phpMyAdmin, HeidiSQL, atau Terminal).
+2. Buat database baru dengan mengeksekusi perintah SQL berikut:
+   ```sql
+   CREATE DATABASE rt_perumahan;
+   ```
+
+### 2. Setup Backend (Laravel API)
+1. Buka terminal atau command prompt, lalu masuk ke direktori backend:
+   ```bash
+   cd backend
+   ```
+2. Instal semua dependensi PHP yang dibutuhkan:
+   ```bash
+   composer install
+   ```
+3. Salin file konfigurasi environment:
+   ```bash
+   cp .env.example .env
+   ```
+   *(Jika menggunakan Windows Command Prompt dan perintah `cp` tidak dikenali, kamu bisa menyalin file `.env.example` secara manual dan mengubah namanya menjadi `.env`)*
+4. Buka file `.env` yang baru dibuat, dan pastikan konfigurasi database sudah benar:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=rt_perumahan
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+   *(Isi `DB_PASSWORD` sesuai dengan kata sandi MySQL kamu, kosongkan jika tidak ada)*
+5. Generate application key Laravel:
+   ```bash
+   php artisan key:generate
+   ```
+6. Jalankan migrasi tabel dan masukkan data awal (seeder) ke dalam database:
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
+   *(Perintah ini akan membuat struktur tabel sekaligus mengisi 20 data rumah, 18 data penghuni, serta riwayat pembayaran dan pengeluaran dummy).*
+7. Buat symbolic link agar foto KTP yang diunggah dapat diakses oleh publik:
+   ```bash
+   php artisan storage:link
+   ```
+8. Jalankan server lokal backend (biarkan terminal ini tetap terbuka):
+   ```bash
+   php artisan serve --port=8000
+   ```
+
+### 3. Setup Frontend (React Client)
+1. Buka jendela terminal **baru** (tanpa menutup terminal backend), lalu masuk ke direktori frontend:
+   ```bash
+   cd frontend
+   ```
+2. Instal dependensi JavaScript (React & plugin terkait):
+   ```bash
+   npm install
+   ```
+3. Jalankan server lokal untuk frontend (Vite):
+   ```bash
+   npm run dev
+   ```
+
+### 4. Mengakses Aplikasi
+Setelah kedua server (backend dan frontend) berhasil berjalan, kamu bisa mulai menggunakan aplikasi:
+1. Buka web browser (Chrome, Firefox, Safari, dll).
+2. Kunjungi alamat: **[http://localhost:5173](http://localhost:5173)**
+3. Gunakan akun administrator bawaan untuk masuk:
    * **Email**: `admin@rt.com`
    * **Password**: `password`
 
