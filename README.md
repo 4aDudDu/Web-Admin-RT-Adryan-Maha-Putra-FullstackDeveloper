@@ -67,6 +67,6 @@ Gunakan akun berikut untuk mencoba aplikasinya:
 - **Email**: `admin@rt.com`
 - **Password**: `password`
 
-
+ERD bisa dilihat pada Root Folder ini
 ---
 Dikembangkan oleh **Adryan Maha Putra**
